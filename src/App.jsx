@@ -10,6 +10,7 @@ import UploadData from "./pages/UploadData";
 import NotReadyPage from "./pages/NotReadyPage";
 import TagManager from "react-gtm-module"
 import { useEffect } from "react";
+import AnalyticsTrackingData from "./pages/AnalyticsTrackingData";
 
 const GTM_ID = 'GTM-T847NLT4'
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/otherSection" element={<NotReadyPage />} />
           <Route path="/downloadtemplate" element={<DownloadTemp />} />
           <Route path="/uploaddata" element={<UploadData />} />
+          <Route path="/analytics" element={<AnalyticsTrackingData />} />
         </Route>
       </Routes>
     </Router>
