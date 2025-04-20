@@ -20,36 +20,42 @@ function Navbar() {
         <Link
           to="/"
           className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-50 font-serif text-blue-700 hover: transition"
+          id="A1"
         >
           HOME
         </Link>
         <Link
           to="/dataCollection"
           className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-50 font-serif text-blue-700 hover: transition"
+          id="B1"
         >
           DATA COLLECTION
         </Link>
         <Link
           to="/reportDashboard"
           className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-50 font-serif text-blue-700 hover: transition"
+          id="C1"
         >
           REPORT & DASHBOARD
         </Link>
         <Link
           to="/userManagement"
           className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-50 font-serif text-blue-700 hover: transition"
+          id="D1"
         >
           USER MANAGEMENT
         </Link>
         <Link
           to="/otherSection"
           className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-50 font-serif text-blue-700 hover: transition"
+          id="E1"
         >
           OTHER SECTION
         </Link>
         <Link
           to="/analytics"
           className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-50 font-serif text-blue-700 hover: transition"
+          id="F1"
         >
           YOUR TRACKING DATA
         </Link>

@@ -15,7 +15,7 @@ const UploadData = () => {
                     country_entity_agency_stream_campaign-type_start-mmyy_end-mmyy_channel_media-data-collection-template.xlsx
                 </div>
 
-                <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded shadow">
+                <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded shadow" id=''>
                     Download template
                 </button>
             </div>

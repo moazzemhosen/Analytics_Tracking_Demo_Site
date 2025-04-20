@@ -18,6 +18,7 @@ const [showForm, setShowForm] = useState(false);
       <div
         className="fixed bottom-6 right-6 bg-blue-600 text-white p-2 rounded-full cursor-pointer shadow-lg z-50"
         onClick={() => setShowForm(!showForm)}
+        id='Cb'
       >
         <TbMessageChatbotFilled className='h-10 w-10' />
       </div>
@@ -34,6 +35,7 @@ const [showForm, setShowForm] = useState(false);
           <button
             className="w-full bg-blue-600 text-white py-2 rounded"
             onClick={handleSubmit}
+            id="fs"
           >
             Submit your Request
           </button>
