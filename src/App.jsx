@@ -12,7 +12,9 @@ import TagManager from "react-gtm-module"
 import { useEffect } from "react";
 import AnalyticsTrackingData from "./pages/AnalyticsTrackingData";
 
-const GTM_ID = 'GTM-T847NLT4'
+const GTM_ID = 'GTM-P7LJTG7'
+//GTM-P7LJTG7- Personal Access
+//'GTM-T847NLT4'--Multiple Access
 
 
 function App() {
