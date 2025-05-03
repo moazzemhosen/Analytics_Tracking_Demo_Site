@@ -1,1 +1,7 @@
 @import "tailwindcss";
+.mermaid-container {
+    background-color: white;
+    color: black;
+    overflow-x: auto;
+  }
+  
