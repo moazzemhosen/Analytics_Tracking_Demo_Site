@@ -14,10 +14,11 @@ graph TD
     D -- No --> F[Show Error]
 `;
   return (
-    <div>
+    <div id="Analytics Tracking">
       <Navbar/>
+      <button>Erase</button>
       <div style={{ padding: "2rem" }}>
-      <h1>Flowchart Example</h1>
+      <h1>Analytics Tracked Data</h1>
       <MermaidChart chart={chart} />
     </div>
     </div>

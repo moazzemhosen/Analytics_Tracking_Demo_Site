@@ -10,7 +10,7 @@ import Float from './Float';
 function HomePage() {
  
   return (
-    <div className="min-h-screen">
+    <div  id="HomePage" className="min-h-screen">
       <Navbar/>
       <Heading/>
       <Card/>
