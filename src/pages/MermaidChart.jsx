@@ -28,9 +28,12 @@ const MermaidChart = ({ chart }) => {
   
     return (
       <div
-        ref={chartRef}
-        style={{ minHeight: "200px", background: "#fff", padding: "1rem" }}
-      />
+  ref={chartRef}
+  style={{ minHeight: "200px" }}
+  className="w-full bg-white p-4 sm:p-6 rounded-lg shadow-lg"
+>
+</div>
+
     );
 };
 

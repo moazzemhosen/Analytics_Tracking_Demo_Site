@@ -1,67 +1,131 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
-  const navigate = useNavigate();
 
-  return (
-    <nav className="flex items-center px-6 py-3 bg-blue-900 shadow-sm">
-      {/* justify-between- reomoved because of left aling */}
-      <button
-        onClick={() => navigate(-1)}
-        className="flex items-center space-x-2 cursor-pointer"
-      >
-        {/* <FaArrowLeft /> */}
-        <img src="logo_white.png" alt="AXA" srcset=""  className="h-10 w-10 object-cover" />
-        
-      </button>
-      
-      <div className="flex space-x-4 ml-60">
-        <Link
-          to="/"
-          className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-50 font-serif text-blue-700 hover: transition"
-          id="A1"
-        >
-          HOME
-        </Link>
-        <Link
-          to="/dataCollection"
-          className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-50 font-serif text-blue-700 hover: transition"
-          id="B1"
-        >
-          DATA COLLECTION
-        </Link>
-        <Link
-          to="/reportDashboard"
-          className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-50 font-serif text-blue-700 hover: transition"
-          id="C1"
-        >
-          REPORT & DASHBOARD
-        </Link>
-        <Link
-          to="/userManagement"
-          className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-50 font-serif text-blue-700 hover: transition"
-          id="D1"
-        >
-          USER MANAGEMENT
-        </Link>
-        <Link
-          to="/otherSection"
-          className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-50 font-serif text-blue-700 hover: transition"
-          id="E1"
-        >
-          OTHER SECTION
-        </Link>
-        <Link
-          to="/analytics"
-          className="px-4 py-1.5 rounded-full text-sm font-medium text-gray-50 font-serif text-blue-700 hover: transition"
-          id="F1"
-        >
-          YOUR TRACKING DATA
-        </Link>
+    const navigate = useNavigate();
+    const [isOpen, setIsOpen] = useState(false);
+  
+    return (
+      <nav className="bg-blue-900 shadow-sm">
+      <div className="flex items-center justify-between px-6 py-3">
+        {/* Left logo and back button */}
+        <div className="flex items-center space-x-2">
+          <button onClick={() => navigate(-1)} className="cursor-pointer">
+            <img src="logo_white.png" alt="AXA" className="h-10 w-10 object-cover" />
+          </button>
+        </div>
+
+        {/* Desktop links */}
+        <div className="hidden md:flex space-x-4">
+          <Link
+            to="/"
+            className="px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="A1"
+          >
+            HOME
+          </Link>
+          <Link
+            to="/dataCollection"
+            className="px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="B1"
+          >
+            DATA COLLECTION
+          </Link>
+          <Link
+            to="/reportDashboard"
+            className="px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="C1"
+          >
+            REPORT & DASHBOARD
+          </Link>
+          <Link
+            to="/userManagement"
+            className="px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="D1"
+          >
+            USER MANAGEMENT
+          </Link>
+          <Link
+            to="/otherSection"
+            className="px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="E1"
+          >
+            OTHER SECTION
+          </Link>
+          <Link
+            to="/analytics"
+            className="px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="F1"
+          >
+            YOUR TRACKING DATA
+          </Link>
+        </div>
+
+        {/* Mobile menu button */}
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile dropdown menu */}
+      {isOpen && (
+        <div className="flex flex-col items-start px-6 pb-4 space-y-2 md:hidden">
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="w-full px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="A1"
+          >
+            HOME
+          </Link>
+          <Link
+            to="/dataCollection"
+            onClick={() => setIsOpen(false)}
+            className="w-full px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="B1"
+          >
+            DATA COLLECTION
+          </Link>
+          <Link
+            to="/reportDashboard"
+            onClick={() => setIsOpen(false)}
+            className="w-full px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="C1"
+          >
+            REPORT & DASHBOARD
+          </Link>
+          <Link
+            to="/userManagement"
+            onClick={() => setIsOpen(false)}
+            className="w-full px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="D1"
+          >
+            USER MANAGEMENT
+          </Link>
+          <Link
+            to="/otherSection"
+            onClick={() => setIsOpen(false)}
+            className="w-full px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="E1"
+          >
+            OTHER SECTION
+          </Link>
+          <Link
+            to="/analytics"
+            onClick={() => setIsOpen(false)}
+            className="w-full px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="F1"
+          >
+            YOUR TRACKING DATA
+          </Link>
+        </div>
+      )}
     </nav>
-  );
-}
+    );
+  }
 
 export default Navbar;

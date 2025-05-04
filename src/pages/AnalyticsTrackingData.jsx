@@ -1,11 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar';
 import MermaidChart from './MermaidChart';
+import Cookies from 'js-cookie';
 
 
 
 const AnalyticsTrackingData = () => {
   const [cookie, setCookie] = useState([])
+
+  const handleErase = () => {
+    // Clear the 'userToken' cookie
+    Cookies.remove('userToken');
+    
+    // Reload the page
+    window.location.reload();
+  };
 
   const actionMapping = {
     "001": "SUBMITTED LOGIN FORM",
@@ -77,14 +86,25 @@ const AnalyticsTrackingData = () => {
 
 
   return (
-    <div id="Analytics Tracking">
-      <Navbar />
-      <button>Erase</button>
-      <div style={{ padding: "2rem" }}>
-        <h1>Analytics Tracked Data</h1>
+    <div id="Analytics Tracking" className="min-h-screen bg-gray-100">
+    <Navbar />
+    
+    <div className="flex flex-col items-center px-4 sm:px-6 lg:px-8 py-6">
+      <button
+        className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded shadow mb-6"
+        onClick={handleErase} // Call handleErase function on click
+      >
+        Erase
+      </button>
+      
+      <div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 text-center">
+          Analytics Tracked Data
+        </h1>
         <MermaidChart chart={chart} />
       </div>
     </div>
+  </div>
   )
 
 }

@@ -8,11 +8,12 @@ const DatacollectionCard = () => {
         {"Title":"Rules & Mapping Tables","link":"/rulesand mapping"},
     ]
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 p-20">
-            {EachCards.map((card, idx) => (
-                <DataCollectionEachCard key={idx} data={card} id={idx}/>
-            ))}
-        </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 px-4 sm:px-10 lg:px-20 py-10">
+  {EachCards.map((card, idx) => (
+    <DataCollectionEachCard key={idx} data={card} id={idx} />
+  ))}
+</div>
+
   )
 }
 
