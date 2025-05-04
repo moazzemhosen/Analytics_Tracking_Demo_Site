@@ -17,7 +17,7 @@ const GTM_ID = 'GTM-P7LJTG7'
 //'GTM-T847NLT4'--Multiple Access
 //Analytics-G-SQGQFLXEBS Personal
 //Analytics-G-XXXXXXXXXX Multiple Access
-//API key-3e155b9fb91f44e392b4e35984cab62f
+
 
 
 function App() {

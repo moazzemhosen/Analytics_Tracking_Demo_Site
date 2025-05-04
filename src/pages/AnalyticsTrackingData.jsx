@@ -74,10 +74,10 @@ const AnalyticsTrackingData = () => {
     return null; // Return null if the cookie is not found
   }
   useEffect(() => {
-    var userToken = getCookie();
-    if (userToken) {
+    var userTokenn = getCookie();
+    if (userTokenn) {
       // Split the cookie value by "&" and convert it into an array
-      var userTokenArray = userToken.split("&");
+      var userTokenArray = userTokenn.split("&");
       setCookie(userTokenArray)
     } else {
       console.log("userToken cookie not found.");
