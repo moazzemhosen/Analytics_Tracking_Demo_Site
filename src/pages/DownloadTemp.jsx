@@ -65,7 +65,7 @@ const DownloadTemp = () => {
 
           <div className="flex justify-center mt-8">
             <Link to="/uploaddata">
-              <button id="Dfs"className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-md">
+              <button id="B500"className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-md">
                 Generate Template
               </button></Link>
           </div>

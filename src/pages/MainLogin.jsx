@@ -9,6 +9,7 @@ const MainLogin = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+
     const { login } = useAuth();
     const navigate = useNavigate();
 
@@ -16,6 +17,13 @@ const MainLogin = () => {
         e.preventDefault();
         const isAuthenticated = login(username, password);
         if (isAuthenticated) {
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                  event: 'loginsubmit',
+                  email: username, // Optionally, do not push the password for security reasons
+                });
+                console.log('Form submitted and dataLayer event pushed.');
+              }
             navigate('/');
         } else {
             alert('Invalid credentials');
@@ -32,6 +40,8 @@ const MainLogin = () => {
 
     const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
     const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+
+    
     return (
         <>
         <div id='1' className="min-h-screen flex">
@@ -98,7 +108,7 @@ const MainLogin = () => {
                             Forgot your password?
                         </a>
                     </div>
-                    <button
+                    <button id="001"
                         type="submit"
                         className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
                     >
