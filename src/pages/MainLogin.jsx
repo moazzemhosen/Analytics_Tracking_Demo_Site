@@ -34,7 +34,7 @@ const MainLogin = () => {
     const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
     return (
         <>
-        <div className="min-h-screen flex">
+        <div id='1' className="min-h-screen flex">
             {/* Left side - Image Slider */}
             <div className="w-1/2 bg-gray-200 relative flex items-center justify-center">
                 <img src={slides[current]} alt="Slide" className="w-full h-full object-cover" />

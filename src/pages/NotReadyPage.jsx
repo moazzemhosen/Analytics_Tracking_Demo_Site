@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 const NotReadyPage = () => {
     return (
 
-        <div>
+        <div id='6'>
             <Navbar />
 
             <div className="flex flex-col items-center justify-center min-h-screen bg-white text-center px-4">

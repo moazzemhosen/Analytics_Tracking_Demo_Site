@@ -4,7 +4,7 @@ import Float from './Float';
 
 const UploadData = () => {
     return (
-        <div>
+        <div id='5'>
             <Navbar />
             <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4">
                 <p className="text-red-600 text-xl font-semibold mb-4">

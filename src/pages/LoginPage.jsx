@@ -22,7 +22,7 @@ function LoginPage() {
   return (
 
     
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div id="1" className="flex items-center justify-center min-h-screen bg-gray-100">
       
       <div className='w-50 border-red-50'>
 
