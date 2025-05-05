@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar';
 import MermaidChart from './MermaidChart';
+
 import Cookies from 'js-cookie';
 
 
 
 const AnalyticsTrackingData = () => {
   const [cookie, setCookie] = useState([])
-
+console.log("CCC",cookie)
   const handleErase = () => {
     // Clear the 'userToken' cookie
     Cookies.remove('userToken');
@@ -63,18 +64,21 @@ const AnalyticsTrackingData = () => {
   const chart = generateMermaidChart(cookie);
 
   function getCookie() {
-    var nameEQ = "userToken" + "=";
-    var ca = document.cookie.split('&');
-    for (var i = 0; i < ca.length; i++) {
-      var c = ca[i].trim();
+    const nameEQ = "userToken=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i].trim();
       if (c.indexOf(nameEQ) === 0) {
-        return decodeURIComponent(c.substring(nameEQ.length)); // Decoding the cookie value
+        return decodeURIComponent(c.substring(nameEQ.length));
       }
     }
-    return null; // Return null if the cookie is not found
+    return null;
   }
+  
   useEffect(() => {
     var userTokenn = getCookie();
+    console.log("suse",userTokenn);
+    
     if (userTokenn) {
       // Split the cookie value by "&" and convert it into an array
       var userTokenArray = userTokenn.split("&");
@@ -99,7 +103,7 @@ const AnalyticsTrackingData = () => {
       
       <div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg">
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 text-center">
-          Analytics Tracked Data
+          Analytics Tracked Click Event Data
         </h1>
         <MermaidChart chart={chart} />
       </div>
