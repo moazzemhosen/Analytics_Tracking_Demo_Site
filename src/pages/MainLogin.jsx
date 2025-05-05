@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
@@ -29,27 +29,19 @@ const MainLogin = () => {
 
   const slides = ["imag1.jpg", "image33.jpg", "image66.jpg", "image77.jpg"];
   const [current, setCurrent] = useState(0);
-  const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 2000);
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [slides.length]);
 
   return (
-    <div id='1' className="min-h-screen flex flex-col md:flex-row">
-      
+    <div id="1" className="min-h-screen flex flex-col md:flex-row">
       {/* Left - Image Slider */}
       <div className="w-full md:w-1/2 h-64 md:h-auto bg-gray-200 relative flex items-center justify-center">
         <img src={slides[current]} alt="Slide" className="w-full h-full object-cover" />
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/60 p-2 rounded-full"
-        >
-          {"<"}
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/60 p-2 rounded-full"
-        >
-          {">"}
-        </button>
 
         {/* Dots */}
         <div className="absolute bottom-4 flex gap-2">
@@ -61,17 +53,18 @@ const MainLogin = () => {
           ))}
         </div>
       </div>
+    
 
       {/* Right - Login Form */}
       <div className="w-full md:w-1/2 flex items-center justify-center bg-white px-4 py-10">
         <form className="w-full max-w-md p-8 shadow-lg rounded-lg bg-white" onSubmit={handleSubmit}>
           <img
-            src="logo.png"
+            src="login.jpg"
             alt="AXA GBS"
-            className="w-20 mx-auto mb-6"
+            className="w-50 mx-auto mb-6"
           />
           <h2 className="text-xl font-semibold text-center mb-1">Welcome back!</h2>
-          <p className="text-sm text-center text-gray-500 mb-6">Please login with your AXA account.</p>
+          <p className="text-sm text-center text-gray-500 mb-6">Please login with your Google account.</p>
 
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">Email</label>

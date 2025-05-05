@@ -13,7 +13,7 @@ function Navbar() {
         {/* Left logo and back button */}
         <div className="flex items-center space-x-2">
           <button onClick={() => navigate(-1)} className="cursor-pointer">
-            <img src="logo_white.png" alt="AXA" className="h-10 w-10 object-cover" />
+            <img src="logo.png" alt="" className="h-10 w-10 object-cover" />
           </button>
         </div>
 
