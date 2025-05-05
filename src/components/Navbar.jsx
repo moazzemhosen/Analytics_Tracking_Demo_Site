@@ -48,11 +48,11 @@ function Navbar() {
             USER MANAGEMENT
           </Link>
           <Link
-            to="/otherSection"
+            to="/product"
             className="px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
             id="E1"
           >
-            OTHER SECTION
+            PRODUCT
           </Link>
           <Link
             to="/analytics"

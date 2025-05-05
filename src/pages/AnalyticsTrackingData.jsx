@@ -23,7 +23,7 @@ console.log("CCC",cookie)
     "B1": "DATA COLLECTION",
     "C1": "REPORT & DASHBOARD",
     "D1": "USER MANAGEMENT",
-    "E1": "OTHER SECTION",
+    "E1": "PRODUCT",
     "F1": "ANALYTICS TRACKING",
 
     //HOMEPAGE CARD

@@ -11,6 +11,8 @@ import NotReadyPage from "./pages/NotReadyPage";
 import TagManager from "react-gtm-module"
 import { useEffect } from "react";
 import AnalyticsTrackingData from "./pages/AnalyticsTrackingData";
+import ProductList from "./pages/ProductList";
+import ProductDetail from "./pages/ProductDetail";
 
 const GTM_ID = 'GTM-P7LJTG7'
 //GTM-P7LJTG7- Personal Access
@@ -39,6 +41,8 @@ function App() {
           <Route path="/downloadtemplate" element={<DownloadTemp />} />
           <Route path="/uploaddata" element={<UploadData />} />
           <Route path="/analytics" element={<AnalyticsTrackingData />} />
+          <Route path="/product" element={<ProductList />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
         </Route>
       </Routes>
     </Router>
