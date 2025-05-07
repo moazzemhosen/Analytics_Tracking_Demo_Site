@@ -153,7 +153,7 @@ const ProductDetail = () => {
                     )}
 
                     {showForm && (
-                        <form className="mt-6 space-y-4 bg-gray-50 p-10 rounded shadow-sm">
+                        <form id='BuyForm' className="mt-6 space-y-4 bg-gray-50 p-10 rounded shadow-sm">
                             <input
                                 type="text"
                                 name="name"

@@ -57,7 +57,7 @@ const MainLogin = () => {
 
       {/* Right - Login Form */}
       <div className="w-full md:w-1/2 flex items-center justify-center bg-white px-4 py-10">
-        <form className="w-full max-w-md p-8 shadow-lg rounded-lg bg-white" onSubmit={handleSubmit}>
+        <form id='LoginForm' className="w-full max-w-md p-8 shadow-lg rounded-lg bg-white" onSubmit={handleSubmit}>
           <img
             src="login.jpg"
             alt="AXA GBS"
