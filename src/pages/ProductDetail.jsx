@@ -110,6 +110,11 @@ const ProductDetail = () => {
 
     const handlePlaceOrder = () => {
         alert('Order placed successfully!');
+        window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: "PlacedOrder",
+                name: "PlacedOrder",
+            });
         setFormData({ name: '', address: '', pin: '', phone: '', payment: 'card' });
         setShowForm(false);
     };
@@ -172,7 +177,7 @@ const ProductDetail = () => {
                                 className="w-full p-2 border border-gray-300 rounded"
                             />
                             <input
-                                type="text"
+                                type="number"
                                 name="pin"
                                 placeholder="PIN Code"
                                 value={formData.pin}
@@ -181,7 +186,7 @@ const ProductDetail = () => {
                                 className="w-full p-2 border border-gray-300 rounded"
                             />
                             <input
-                                type="tel"
+                                type="number"
                                 name="phone"
                                 placeholder="Phone Number"
                                 value={formData.phone}
