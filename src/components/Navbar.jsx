@@ -4,11 +4,11 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
 
-    const navigate = useNavigate();
-    const [isOpen, setIsOpen] = useState(false);
-  
-    return (
-      <nav className="bg-blue-900 shadow-sm">
+  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <nav className="bg-blue-900 shadow-sm">
       <div className="flex items-center justify-between px-6 py-3">
         {/* Left logo and back button */}
         <div className="flex items-center space-x-2">
@@ -34,32 +34,26 @@ function Navbar() {
             DATA COLLECTION
           </Link>
           <Link
-            to="/reportDashboard"
-            className="px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
-            id="C1"
-          >
-            REPORT & DASHBOARD
-          </Link>
-          <Link
-            to="/userManagement"
-            className="px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
-            id="D1"
-          >
-            USER MANAGEMENT
-          </Link>
-          <Link
             to="/product"
             className="px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
-            id="E1"
+            id="C1"
           >
             PRODUCT
           </Link>
           <Link
+            to="/aboutanalytics"
+            className="px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
+            id="D1"
+          >
+            ABOUT ANALYTICS
+          </Link>
+
+          <Link
             to="/analytics"
             className="px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
-            id="F1"
+            id="E1"
           >
-            YOUR TRACKING DATA
+            REPORT & DASHBOARD
           </Link>
         </div>
 
@@ -96,36 +90,29 @@ function Navbar() {
             className="w-full px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
             id="C1"
           >
-            REPORT & DASHBOARD
+            PRODUCT
           </Link>
+          
           <Link
-            to="/userManagement"
+            to="/aboutanalytics"
             onClick={() => setIsOpen(false)}
             className="w-full px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
             id="D1"
           >
-            USER MANAGEMENT
-          </Link>
-          <Link
-            to="/otherSection"
-            onClick={() => setIsOpen(false)}
-            className="w-full px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
-            id="E1"
-          >
-            OTHER SECTION
+            ABOUT ANALYTICS
           </Link>
           <Link
             to="/analytics"
             onClick={() => setIsOpen(false)}
             className="w-full px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
-            id="F1"
+            id="E1"
           >
-            YOUR TRACKING DATA
+            REPORT & DASHBOARD
           </Link>
         </div>
       )}
     </nav>
-    );
-  }
+  );
+}
 
 export default Navbar;

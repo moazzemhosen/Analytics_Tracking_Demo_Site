@@ -21,10 +21,10 @@ console.log("CCC",cookie)
     "001": "SUBMITTED LOGIN FORM",
     "A1": "HOME",
     "B1": "DATA COLLECTION",
-    "C1": "REPORT & DASHBOARD",
-    "D1": "USER MANAGEMENT",
-    "E1": "PRODUCT",
-    "F1": "ANALYTICS TRACKING",
+    "C1": "PRODUCT",
+    "D1": "ABOUT ANALYTICS",
+    "E1": "REPORT & DASHBOARD",
+  
 
     //HOMEPAGE CARD
     "A10": "DATA COLLECTION",
@@ -43,6 +43,34 @@ console.log("CCC",cookie)
     "B500": "Generate Template",
 
     // Add more mappings as needed
+    "11":"Samsung Galaxy S24",
+    "22":"Motorola G85 5G",
+    "33":"Apple iPhone 13",
+    "44":"OnePlus 12R",
+    "55":"Google Pixel 7a",
+    "66":"Nothing Phone (2)",
+
+    //cart value add
+    "1111":"Samsung Galaxy S24 (Added to cart)",
+    "2222":"Motorola G85 5G (Added to cart)",
+    "3333":"Apple iPhone 13 (Added to cart)",
+    "4444":"OnePlus 12R (Added to cart)",
+    "5555":"Google Pixel 7a (Added to cart)",
+    "6666":"Nothing Phone (2) (Added to cart)",
+
+    //buy product
+    "1100":"Samsung Galaxy S24 (Order Placed)",
+    "2200":"Motorola G85 5G (Order Placed)",
+    "3300":"Apple iPhone 13 (Order Placed)",
+    "4400":"OnePlus 12R (Order Placed)",
+    "5500":"Google Pixel 7a (Order Placed)",
+    "6600":"Nothing Phone (2) (Order Placed)",
+
+    //Cookie Preference
+    "T":"Accepted Cookie",
+    "F":"Rejected Cookie",
+    "007":"Order Placed",
+    "v1":"Video Played"
   };
 
 
@@ -98,7 +126,7 @@ console.log("CCC",cookie)
         className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded shadow mb-6"
         onClick={handleErase} // Call handleErase function on click
       >
-        Erase
+        Delete Your Data
       </button>
       
       <div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg">
