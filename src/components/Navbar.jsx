@@ -85,7 +85,7 @@ function Navbar() {
             DATA COLLECTION
           </Link>
           <Link
-            to="/reportDashboard"
+            to="/product"
             onClick={() => setIsOpen(false)}
             className="w-full px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-blue-700 transition-all font-serif"
             id="C1"
