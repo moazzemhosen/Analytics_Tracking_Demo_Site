@@ -12,7 +12,7 @@ const IframeVideo = () => {
             </h1>
             <VideoIframe
             id="v1"
-                src="https://www.youtube.com/embed/ny2rBxwvxBY"
+                src="https://www.youtube.com/embed/ny2rBxwvxBY?enablejsapi=1"
                 title="What is Google Analytics"
             />
         </div>
