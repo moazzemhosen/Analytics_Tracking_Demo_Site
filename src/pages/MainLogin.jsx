@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Swal from 'sweetalert2';
 
 const MainLogin = () => {
   const [username, setUsername] = useState('');
@@ -23,7 +24,13 @@ const MainLogin = () => {
       }
       navigate('/');
     } else {
-      alert('Invalid credentials');
+      Swal.fire({
+        icon: 'error',
+        title: 'Missing Information',
+        text: 'Please fill in both email and password before continuing.',
+        confirmButtonColor: '#3B82F6',
+      });
+      
     }
   };
 
@@ -53,57 +60,70 @@ const MainLogin = () => {
           ))}
         </div>
       </div>
-    
+
 
       {/* Right - Login Form */}
-      <div className="w-full md:w-1/2 flex items-center justify-center bg-white px-4 py-10">
-        <form id='LoginForm' className="w-full max-w-md p-8 shadow-lg rounded-lg bg-white" onSubmit={handleSubmit}>
-          <img
-            src="login.jpg"
-            alt="AXA GBS"
-            className="w-50 mx-auto mb-6"
-          />
-          <h2 className="text-xl font-semibold text-center mb-1">Welcome back!</h2>
-          <p className="text-sm text-center text-gray-500 mb-6">Please login with your Google account.</p>
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
+        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row w-full max-w-4xl">
 
-          <div className="mb-4">
-            <label className="block text-sm font-medium mb-1">Email</label>
-            <input
-              type="email"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
-              placeholder="Enter Your Email"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
+          {/* Left: Image */}
+          <div className="md:w-1/2 bg-blue-100 flex items-center justify-center p-8">
+            <img
+              src="login.jpg"
+              alt="Login visual"
+              className="rounded-xl shadow-lg"
             />
           </div>
 
-          <div className="mb-4">
-            <label className="block text-sm font-medium mb-1">Password</label>
-            <input
-              type="password"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
+          {/* Right: Form */}
+          <div className="w-full md:w-1/2 flex items-center justify-center p-10">
+            <form
+              id="LoginForm"
+              className="w-full max-w-md"
+              onSubmit={handleSubmit}
+            >
+              <h2 className="text-3xl font-bold text-center mb-2">Welcome Back!</h2>
+              <p className="text-sm text-center text-gray-500 mb-6">
+                Sign in with your email to continue.
+              </p>
 
-          <div className="mb-4 text-right">
-            <a href="#" className="text-sm text-blue-600 hover:underline">
-              Forgot your password?
-            </a>
-          </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium mb-1">Email</label>
+                <input
+                  type="email"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  placeholder="Enter your email"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </div>
 
-          <button
-            id="001"
-            type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
-          >
-            Login
-          </button>
-        </form>
+              <div className="mb-4">
+                <label className="block text-sm font-medium mb-1">Password</label>
+                <input
+                  type="password"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+
+              <div className="mb-4 text-right">
+                <a href="#" className="text-sm text-blue-600 hover:underline">
+                  Forgot password?
+                </a>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-200"
+              >
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   );
