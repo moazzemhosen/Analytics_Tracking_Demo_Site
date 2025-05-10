@@ -55,7 +55,7 @@ const ProductList = () => {
             <Navbar />
             <div className="p-15 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {products.map((product) => (
-                    <Link to={`/product/${product.id}`} key={product.id}>
+                    <Link to={`/product/${product.id}`} key={product.id} id={product.id}>
                         <ProductCard key={product.id} product={product} />
                     </Link>
                 ))}

@@ -50,13 +50,20 @@ console.log("CCC",cookie)
     "55":"Google Pixel 7a",
     "66":"Nothing Phone (2)",
 
-    //cart value add
-    "1111":"Samsung Galaxy S24 (Added to cart)",
-    "2222":"Motorola G85 5G (Added to cart)",
-    "3333":"Apple iPhone 13 (Added to cart)",
-    "4444":"OnePlus 12R (Added to cart)",
-    "5555":"Google Pixel 7a (Added to cart)",
-    "6666":"Nothing Phone (2) (Added to cart)",
+    //cart value add button
+    "116":"Samsung Galaxy S24 (Added to cart)",
+    "226":"Motorola G85 5G (Added to cart)",
+    "336":"Apple iPhone 13 (Added to cart)",
+    "446":"OnePlus 12R (Added to cart)",
+    "556":"Google Pixel 7a (Added to cart)",
+    "666":"Nothing Phone (2) (Added to cart)",
+    //buy now value add button
+    "115":"Samsung Galaxy S24 (Buy Form Opned)",
+    "225":"Motorola G85 5G (Buy Form Opned)",
+    "335":"Apple iPhone 13 (Buy Form Opned)",
+    "445":"OnePlus 12R (Buy Form Opned)",
+    "555":"Google Pixel 7a (Buy Form Opned)",
+    "665":"Nothing Phone (2) (Buy Form Opned)",
 
     //buy product
     "1100":"Samsung Galaxy S24 (Order Placed)",

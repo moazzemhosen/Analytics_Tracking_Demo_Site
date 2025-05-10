@@ -72,11 +72,23 @@ const ProductDetail = () => {
   if (!product) return <div className="p-4 text-red-600">Product not found.</div>;
 
   const handleAddToCart = () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "add_to_cart",
+      name: productMap[id].name,
+      aid:id+"6",
+    });
     setShowAdded(true);
     setTimeout(() => setShowAdded(false), 2000);
   };
 
   const handleBuyNow = () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "buy_now",
+      name: productMap[id].name,
+      aid:id+"5",
+    });
     setShowForm(true);
   };
 
@@ -135,14 +147,13 @@ const ProductDetail = () => {
           <div className="text-yellow-500">⭐ {product.rating} ({product.reviews} Reviews)</div>
 
           <button
-            id={`${id}${id}`}
             onClick={handleAddToCart}
             className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded"
           >
             Add to Cart
           </button>
 
-          <button
+          <button id={`${id}${id}1`}
             onClick={handleBuyNow}
             className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded ml-2"
           >
