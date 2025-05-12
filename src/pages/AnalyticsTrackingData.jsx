@@ -18,7 +18,7 @@ console.log("CCC",cookie)
   };
 
   const actionMapping = {
-    "001": "SUBMITTED LOGIN FORM",
+    "001": "LOGIN",
     "A1": "HOME",
     "B1": "DATA COLLECTION",
     "C1": "PRODUCT",
@@ -28,7 +28,7 @@ console.log("CCC",cookie)
 
     //HOMEPAGE CARD
     "A10": "DATA COLLECTION",
-    "A11": "REPORT & DASHBOARD",
+    "A11": "REPORT & DASHBOARD CARD",
     "A12": "USER MANAGEMENT",
     "A13": "OTHER SECTION",
 

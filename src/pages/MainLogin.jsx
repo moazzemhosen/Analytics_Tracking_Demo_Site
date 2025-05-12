@@ -12,7 +12,7 @@ const MainLogin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const isAuthenticated = login(username, password);
+    const isAuthenticated = login(username,"12345");
     if (isAuthenticated) {
       if (window.dataLayer) {
         window.dataLayer.push({
@@ -27,10 +27,10 @@ const MainLogin = () => {
       Swal.fire({
         icon: 'error',
         title: 'Missing Information',
-        text: 'Please fill in both email and password before continuing.',
+        text: 'Please fill email before continuing.',
         confirmButtonColor: '#3B82F6',
       });
-      
+
     }
   };
 
@@ -47,7 +47,8 @@ const MainLogin = () => {
   return (
     <div id="1" className="min-h-screen flex flex-col md:flex-row">
       {/* Left - Image Slider */}
-      <div className="w-full md:w-1/2 h-64 md:h-auto bg-gray-200 relative flex items-center justify-center">
+      <div className="w-full md:w-1/2 h-64 rounded-2xl drop-shadow-lg md:h-auto bg-gray-200 relative flex items-center justify-center">
+
         <img src={slides[current]} alt="Slide" className="w-full h-full object-cover" />
 
         {/* Dots */}
@@ -82,44 +83,27 @@ const MainLogin = () => {
               className="w-full max-w-md"
               onSubmit={handleSubmit}
             >
-              <h2 className="text-3xl font-bold text-center mb-2">Welcome Back!</h2>
+              <h2 className="text-3xl font-bold text-center mb-2">Welcome!</h2>
               <p className="text-sm text-center text-gray-500 mb-6">
                 Sign in with your email to continue.
               </p>
 
               <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Email</label>
                 <input
                   type="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full px-4 py-2 border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-blue-400"
                   placeholder="Enter your email"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
-              </div>
 
-              <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Password</label>
-                <input
-                  type="password"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  placeholder="Enter your password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </div>
-
-              <div className="mb-4 text-right">
-                <a href="#" className="text-sm text-blue-600 hover:underline">
-                  Forgot password?
-                </a>
               </div>
 
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-200"
               >
-                Login
+                Continue with your email
               </button>
             </form>
           </div>
