@@ -26,7 +26,7 @@ const Heading = () => {
         Hello, {displayName}
       </h1>
       <h2 className="text-base sm:text-lg text-gray-600">
-        Welcome to AXA
+        Welcome
       </h2>
     </div>
   </div>
