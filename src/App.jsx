@@ -16,7 +16,7 @@ import ProductDetail from "./pages/ProductDetail";
 import IframeVideo from "./pages/IframeVideo";
 import CookieBanner from "./components/CookieBanner";
 
-const GTM_ID = 'GTM-P7LJTG7'
+const GTM_ID = ''
 //GTM-P7LJTG7- Personal Access
 //'GTM-T847NLT4'--Multiple Access
 //Analytics-G-SQGQFLXEBS Personal
